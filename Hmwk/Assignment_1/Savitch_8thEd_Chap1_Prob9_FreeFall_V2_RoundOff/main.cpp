@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
+ * Author: Josemanuel Maticorena
  * Created on July 19, 2016, 9:07 AM
  * Purpose:  Hello World Template
  */
@@ -24,9 +24,9 @@ int main(int argc, char** argv) {
           distnce;//Distance in feet
     int rndOff; //What decimal place to round off to
     //Input or initialize values Here
-    cout<<"This problem solve the distance traveled"<<endl;
+    cout<<"This problem solves the distance traveled"<<endl;
     cout<<"in free-fall under Earth gravity"<<endl;
-    cout<<"Input the time of free-fall in seconds"<<endl;
+    cout<<"Input the time of free-fall in seconds."<<endl;
     cin>>time;
     cout<<"How many decimal places 1,2,3 for the answer"<<endl;
     cin>>rndOff;
