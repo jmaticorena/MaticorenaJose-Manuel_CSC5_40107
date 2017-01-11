@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Josemanuel Maticorena
  * Created on January 11, 2017, 1:30 PM
- * Purpose:  Hello World Template
+ * Purpose:  Tell a story
  */
 
 //System Libraries Here
