@@ -2,7 +2,7 @@
  * File:   main.cpp
  * Author: Josemanuel Maticorena
  * Created on January 12, 2017, 11:21
- * Purpose:  Hello World Template
+ * Purpose:  Calculate the grade using ifelse statements
  */
 
 //System Libraries Here
