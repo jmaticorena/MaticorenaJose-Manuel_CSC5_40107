@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
     cin.ignore();
     cout<<"Please enter your city in which you live."<<endl;
     getline(cin,city);
-    cout<<"Please enter your college you attend."<<endl;
+    cout<<"Please enter your college you attended."<<endl;
     getline(cin,college);
     cout<<"Please enter your profession."<<endl;
     getline(cin,prfsn);
