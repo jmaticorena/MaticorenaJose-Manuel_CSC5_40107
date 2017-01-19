@@ -1,6 +1,6 @@
 /* 
  * File:   main.cpp
- * Author: Dr. Mark E. Lehr
+ * Author: Josemanuel Maticorena
  * Created on January 19, 2017, 10:55 AM
  * Purpose:  Penny Double
  */
