@@ -19,17 +19,28 @@ using namespace std;
 //Program Execution Begins Here
 int main(int argc, char** argv) {
     //Declare all Variables Here
-    char star='*';
-    int num=10;
-    for (int loop=1;loop<=num;loop++){
-    cout<<star;
-    cout<<endl;
+    int numPlus=1;//number of stars initialized
+    int row=10; //number of rows
+    //Pattern A
+    cout<<"--Pattern A--"<<endl;
+    for (int loop=1;loop<=row;loop++){ //Loop for Rows
+        for (int Plus=1;Plus<=numPlus;Plus++){ //Loop to display Pluses
+            cout<<"+";
+        }
+        numPlus++;
+        cout<<endl;
     }
-    //Input or initialize values Here
-    
-    //Process/Calculations Here
-    
-    //Output Located Here
+    cout<<"--Pattern B--"<<endl;;//Space Between Pattern A and B
+    //Pattern B
+    numPlus=1; //numPlus reinitialized
+     for (int loop=1;loop<=row;loop++){//Loop for Rows
+        for (int Plus=10;Plus>=numPlus;Plus--){//Loop to display Pluses
+            cout<<"+";
+        }
+        numPlus++;
+        cout<<endl;
+    }
+   
 
     //Exit
     return 0;

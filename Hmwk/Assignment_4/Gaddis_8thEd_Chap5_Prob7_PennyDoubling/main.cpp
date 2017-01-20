@@ -21,9 +21,10 @@ using namespace std;
 //Program Execution Begins Here
 int main(int argc, char** argv) {
     //Declare all Variables Here
-    int salary=1,totPay=0,maxDays=31;//Salary and Pay in Pennies
+    int salary=1,totPay=0,maxDays;//Salary and Pay in Pennies
     //Input or initialize values Here
-    
+    cout<<"Input the number of days worked with the salary."<<endl;
+    cin>>maxDays;
     //Process/Calculations Here
     for(int day=1;day<=maxDays;day++,salary*=2){
         int cents=salary%100;
@@ -40,8 +41,8 @@ int main(int argc, char** argv) {
     double salLDay=(pow(2,maxDays-1))/100;
     double totLDay=(pow(2,maxDays)-1)/100;
     cout<<fixed<<setprecision(2)<<showpoint;
-    cout<<"Final salary predicted=$"<<salLDay<<endl;
-    cout<<"Final Total Pay predicted=$"<<totLDay<<endl;
+    cout<<"Final salary predicted after "<<maxDays<<" days = $"<<salLDay<<endl;
+    cout<<"Final Total Pay predicted after "<<maxDays<<" days = $"<<totLDay<<endl;
     //Exit
     return 0;
 }
