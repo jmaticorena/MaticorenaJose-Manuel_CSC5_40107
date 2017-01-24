@@ -38,12 +38,15 @@ int main(int argc, char** argv) {
     //Exit
     return 0;
 }
-//000000001111111111222222222233333333334444444444555555555566666666667777777778
+//000000011111111112222222222333333333344444444445555555555666666666677777777778
 //345678901234567890123456789012345678901234567890123456789012345678901234567890
-//************************* Roman Numeral Conversion ***************************
-//Description: convert numbers from 1000 to 3000
+//******************** Roman Numeral Conversion ********************************
+//Description:  Convert numbers from 1000 to 3000
 //Inputs:
-//    years
+//     year -> Year from 1000 to 3000
+//Outputs:
+//     romanYr ->  Output to the 
+//******************************************************************************
 string cnvrtRN(unsigned short year){
     //Declare Variables
     char n1000,n100,n10,n1;//The number of power of 10
@@ -64,19 +67,51 @@ string cnvrtRN(unsigned short year){
         default:cout<<"Bad Year"<<endl;
     }
     
+     //Fill the string with C's
     switch(n100){
-        case 9:roman+='M';
-        case 8:roman+='M';
-        case 7:roman+='M';
-        case 6:roman+='M';
-        case 5:roman+='M';
-        case 4:roman+='M';
-        case 3:roman+='M';
-        case 2:roman+='M';
-        case 1:roman+='M';break;
+        case 9:roman+="CM";break;
+        case 8:roman+="DCCC";break;
+        case 7:roman+="DCC";break;
+        case 6:roman+="DC";break;
+        case 5:roman+="D";break;
+        case 4:roman+="CD";break;
+        case 3:roman+='C';
+        case 2:roman+='C';
+        case 1:roman+='C';break;
         case 0:break;
         default:cout<<"Bad Year"<<endl;
     }
+    
+     //Fill the string with X's
+    switch(n10){
+        case 9:roman+="XC";break;
+        case 8:roman+="LXXX";break;
+        case 7:roman+="LXX";break;
+        case 6:roman+="LX";break;
+        case 5:roman+="L";break;
+        case 4:roman+="XL";break;
+        case 3:roman+='X';
+        case 2:roman+='X';
+        case 1:roman+='X';break;
+        case 0:break;
+        default:cout<<"Bad Year"<<endl;
+    }
+    
+    //Fill the string with I's
+    switch(n1){
+        case 9:roman+="IX";break;
+        case 8:roman+="VIII";break;
+        case 7:roman+="VII";break;
+        case 6:roman+="VI";break;
+        case 5:roman+="V";break;
+        case 4:roman+="IV";break;
+        case 3:roman+='I';
+        case 2:roman+='I';
+        case 1:roman+='I';break;
+        case 0:break;
+        default:cout<<"Bad Year"<<endl;
+    }
+    //Return String
     return roman;
     
 }
