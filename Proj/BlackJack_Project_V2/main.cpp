@@ -159,10 +159,10 @@ int main(int argc, char** argv) {
                     dealAce++;//Increment dealer aces
                 }
                 if(dealcard==2||dealcard==3||dealcard==4||dealcard==5||dealcard==6||dealcard==7||dealcard==8||dealcard==9||dealcard==10){
-                    dealSum+=dealcard;//Add card value to sumk
+                    dealSum+=dealcard;//Add card value to sum
                 }
 
-                if(dealSum>21&&dealAce>0){//Acounting for Dealer Aces
+                if(dealSum>21&&dealAce>0){//Accounting for Dealer Aces
                     dealSum-=10;//Adjust value
                     dealAce--;//Decrement Dealer Aces
                 }
@@ -171,9 +171,7 @@ int main(int argc, char** argv) {
             
             stay=true;//Stay set to true
         }
-        else{
-            cout<<"Invalid Entry"<<endl;
-        }
+       
 
     }while(stay==false);//Loop while stay is not true
 

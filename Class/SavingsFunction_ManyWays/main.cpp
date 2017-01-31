@@ -43,6 +43,7 @@ int main(int argc, char** argv) {
     cout<<fixed<<setprecision(2)<<showpoint;
     cout<<"Savings 1 = $"<<save1(pv,iRate,nPeriod)<<endl;
     cout<<"Savings 2 = $"<<save2(pv,iRate,nPeriod)<<endl;
+    cout<<"Savings 3 = $"<<save3(pv,iRate,nPeriod)<<endl;
     cout<<"Savings 4 = $"<<save4(pv,iRate,nPeriod)<<endl;
     cout<<"Savings 5 = $"<<save5(pv,iRate)<<endl;
     cout<<"Savings 1 float = $"<<save1(pv,iRate,static_cast<float>(nPeriod))<<endl;
@@ -64,7 +65,11 @@ float save2(float p,float i,int n){
 }
 
 float save3(float p,float i,int n){
-    return p*pow(1+i,n);
+    float fv=p;
+    for(int year=1;year<=n;year++){
+        fv*=(1+i);
+    }
+    return fv;
 }
 
 float save4(float p,float i,int n){
