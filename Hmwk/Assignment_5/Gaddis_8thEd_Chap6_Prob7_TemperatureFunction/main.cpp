@@ -18,20 +18,20 @@ using namespace std;
 //as well as conversions from system of units to another
 
 //Function Prototypes
-
+float celsius(float);
 //Executable code begins here!!!
 int main(int argc, char** argv) {
     //declare variables
-    float tempC, //temperature in Celsius to be converted
-          tempF; //temperature in Fahrenheit
+    float tempC, //temperature in Celsius 
+          tempF; //temperature in Fahrenheit to be converted
     //Input Values
    
     //Process by mapping inputs to outputs
-    cout<<"Celsius            Fahrenheit"<<endl;
-    for(tempC=0;tempC<=20;tempC++){
+    cout<<"Fahrenheit               Celsius"<<endl;
+    for(tempF=0;tempF<=20;tempF++){
+      tempC=celsius(tempF);
       cout<<setprecision(2)<<fixed;
-      tempF=9*tempC/5+32;  
-      cout<<setw(5)<<tempC<<"                 "<<tempF<<endl;
+      cout<<setw(7)<<tempF<<"                 "<<setw(7)<<tempC<<endl;
       
     }
     //Output values
@@ -39,3 +39,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 
+float celsius(float inTemp){
+    float outTemp;
+    return outTemp=(5/9.0)*(inTemp-32); 
+}
