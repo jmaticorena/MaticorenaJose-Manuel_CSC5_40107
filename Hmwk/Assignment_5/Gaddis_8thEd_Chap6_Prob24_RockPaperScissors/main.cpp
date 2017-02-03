@@ -19,63 +19,64 @@ using namespace std;
 
 //Function Prototypes Here
 int shoot();//Generate Computer Move
-string cnvrt(int);//Convert Computer Choice to String
+string cnvrNum(int);//Convert Computer Choice to String
 //Program Execution Begins Here
 int main(int argc, char** argv) {
     //set random number generator
     srand(static_cast<unsigned int>(time(0)));
     //Declare all Variables Here
-    string choiceStr, //Player Choice
-           comStr; //Computer String
-    bool win=false;//Player win true or false
-    int comp;      //Computer Choice 1=Rock 2=Paper 3=Scissors
+    string chceStr, //Player Choice String
+           comStr;    //Computer String
+    bool win=false;   //Player win true or false
+    int compNum,      //Computer Choice 1=Rock 2=Paper 3=Scissors
+        chocNum;      //Player choice in Number
     //Input or initialize values Here
     cout<<"Welcome to the Rock, Paper, Scissors Program."<<endl;
     cout<<"Enter your choice and see if you can beat me."<<endl;
-    cout<<"Enter your choice of rock, paper, or scissors."<<endl;
-    cin>>choice;
     //Process/Calculations Here
     do{
-        comp=shoot();
-        comStr=cnvrt(comp);
-    switch(choice){
-        case "rock":{
-            cout<<"You picked "<<choice<<" and the computer chose "<<comStr<<endl;
-            if(comp==1){
-                cout<<"It is a draw. Try again."<<endl;
+        cout<<"Enter 1 for rock, 2 for paper, or 3 for scissors."<<endl;
+        cin>>chocNum;
+        compNum=shoot();
+        comStr=cnvrNum(compNum);
+    switch(chocNum){
+        case 1:{
+            cout<<"You picked Rock and the computer chose "<<comStr<<endl;
+            if(compNum==1){
+                cout<<"It is a draw. Try again."<<endl<<endl;
             }
-            if(comp==2){
-                cout<<"You lose. Try again."<<endl;
+            if(compNum==2){
+                cout<<"You lose. Try again."<<endl<<endl;
             }
-            if(comp==3){
+            if(compNum==3){
                 cout<<"You win!"<<endl;
                 win=true;
             }
             break;
         }
-        case "paper":{
-            cout<<"You picked "<<choice<<" and the computer chose "<<comStr<<endl;
-            if(comp==2){
-                cout<<"It is a draw. Try again."<<endl;
+        case 2:{
+            cout<<"You picked Paper and the computer chose "<<comStr<<endl;
+            if(compNum==2){
+                cout<<"It is a draw. Try again."<<endl<<endl;
             }
-            if(comp==3){
-                cout<<"You lose. Try again."<<endl;
+            if(compNum==3){
+                cout<<"You lose. Try again."<<endl<<endl;
             }
-            if(comp==1){
+            if(compNum==1){
                 cout<<"You win!"<<endl;
                 win=true;
             }
             break;
         }
-        case "scissors":{
-            cout<<"You picked "<<choice<<" and the computer chose "<<comStr<<endl;
-            if(comp==3){
-                cout<<"It is a draw. Try again."<<endl;
+        case 3:{
+            cout<<"You picked Scissors and the computer chose "<<comStr<<endl;
+            if(compNum==3){
+                cout<<"It is a draw. Try again."<<endl<<endl;
             }
-            if(comp==1){
-                cout<<"You lose. Try again."<<endl;
+            if(compNum==1){
+                cout<<"You lose. Try again."<<endl<<endl;
             }
-            if(comp==2){
+            if(compNum==2){
                 cout<<"You win!"<<endl;
                 win=true;
             }
@@ -84,8 +85,9 @@ int main(int argc, char** argv) {
         default :{
             cout<<"Invalid Entry"<<endl; break;
         }
+        cout<<endl;
     }
-    }while(win=false);
+    }while(win==false);
     //Output Located Here
     
 
@@ -99,12 +101,13 @@ int shoot(){
     return choice;
 }
 
-string cnvrt(int num){
+string cnvrNum(int num){
     string out;
     switch(num){
-        case '1': out="Rock";break;
-        case '2': out="Paper";break;
-        case '3': out="Scissors";break;
+        case 1: out="Rock";break;
+        case 2: out="Paper";break;
+        case 3: out="Scissors";break;
         default:break;
     }
+    return out;
 }
