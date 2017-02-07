@@ -45,11 +45,12 @@ int main(int argc, char** argv) {
     cout<<"You will start with $500."<<endl;
     cout<<"You can bet each game with a minimum bet of $50"<<endl;
     do {
-    cout<<"Your total is $"<<Plr$<<endl;
-    cout<<"How much would you like to bet?"<<endl;
-    cin>>PlrBet;
-    cin.ignore();
-    cout<<"You will now be delt two cards"<<endl<<endl;
+        cout<<endl;
+        cout<<"Your total is $"<<Plr$<<endl;
+        cout<<"How much would you like to bet?"<<endl;
+        cin>>PlrBet;
+        cin.ignore();
+        cout<<"You will now be delt two cards"<<endl<<endl;
     
     //First Player Card 
     PlrCrd1=Deck();
@@ -127,6 +128,7 @@ int main(int argc, char** argv) {
     }
     else{
             cout<<"Continue Play"<<endl;
+            stay=false;
     }
     while(stay==false){;//Loop while stay is not true//Continue Play
         cout<<endl;//Skip a line for format
@@ -204,7 +206,7 @@ int main(int argc, char** argv) {
             cout<<"You have a total of "<<sum<<endl;
             cout<<"The dealer has a total of "<<dealSum<<endl;
             cout<<"You win!"<<endl;
-            win=false;
+            win=true;
         }
         
         if(sum<dealSum&&dealSum<=21){//Player loses
@@ -233,6 +235,7 @@ int main(int argc, char** argv) {
         Plr$-=PlrBet;
     }
     }while(Plr$>0);
+    cout<<"You have lost all of your money"<<endl;
     
     //Exit Stage right!
     return 0;
