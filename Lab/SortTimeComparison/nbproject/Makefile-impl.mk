@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=BlackJack_Project_V2
+PROJECTNAME=SortTimeComparison
 
 # Active Configuration
 DEFAULTCONF=Debug

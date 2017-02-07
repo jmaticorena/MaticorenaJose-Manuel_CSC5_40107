@@ -32,12 +32,23 @@ int main(int argc, char** argv) {
     int PlrCrd1,//First Card Delt
         PlrCrd2,//Second Card Delt
         DealCrd,//First Dealer Card
-        nbOfAce,//Keeps Track of Player Aces
-        dealAce;//Keeps Track of Dealer Aces
+        nbOfAce=0,//Keeps Track of Player Aces
+        dealAce=0,//Keeps Track of Dealer Aces
+        Plr$=500,//Player Money Initialized to $500
+        PlrBet;//Player bet
     int sum=0,//Sum of the value of the player Cards
-        dealSum;//Sum of the value of the dealer Cards
+        dealSum=0;//Sum of the value of the dealer Cards
+    bool stay=false,
+         win;
     //Begin Play
     cout<<"Welcome to Blackjack."<<endl;
+    cout<<"You will start with $500."<<endl;
+    cout<<"You can bet each game with a minimum bet of $50"<<endl;
+    do {
+    cout<<"Your total is $"<<Plr$<<endl;
+    cout<<"How much would you like to bet?"<<endl;
+    cin>>PlrBet;
+    cin.ignore();
     cout<<"You will now be delt two cards"<<endl<<endl;
     
     //First Player Card 
@@ -111,10 +122,13 @@ int main(int argc, char** argv) {
     
 
     //Check For Natural Blackjack
-    sum==BlckJck?cout<<"Congratulations you have blackjack! You win!"<<endl:
-        cout<<"Continue Play"<<endl;
-    bool stay=false;//stay initialized to false
-    do {//Continue Play
+    if (sum==BlckJck){
+        stay=true;
+    }
+    else{
+            cout<<"Continue Play"<<endl;
+    }
+    while(stay==false){;//Loop while stay is not true//Continue Play
         cout<<endl;//Skip a line for format
         string choice;//Choice Input
         cout<<"Would you like to hit or stay?"<<endl;
@@ -173,33 +187,38 @@ int main(int argc, char** argv) {
         }
        
 
-    }while(stay==false);//Loop while stay is not true
+    }
 
     //Determining wins or losses
     if(sum>21){//Player Bust
         cout<<"Sorry you have busted with a total of "<<sum<<endl;
         cout<<"You have lost."<<endl;
+        win=false;
     }
     if(sum==21){//Player has Blackjack
         cout<<"Congratulations you have blackjack! You win!"<<endl;
+        win=true;
     }
     if(sum<21){//Player Stays
         if(sum>dealSum){//Player wins 
             cout<<"You have a total of "<<sum<<endl;
             cout<<"The dealer has a total of "<<dealSum<<endl;
             cout<<"You win!"<<endl;
+            win=false;
         }
         
         if(sum<dealSum&&dealSum<=21){//Player loses
             cout<<"You have a total of "<<sum<<endl;
             cout<<"The dealer has a total of "<<dealSum<<endl;
             cout<<"You lose."<<endl;
+            win=false;
         }
         
         if(sum<dealSum&&dealSum>21){//Player wins dealer busts
             cout<<"You have a total of "<<sum<<endl;
             cout<<"The dealer has a total of "<<dealSum<<endl;
             cout<<"You win!"<<endl;
+            win=true;
         }
         if(sum==dealSum){//PLayer and dealer have same value
             cout<<"You have a total of "<<sum<<endl;
@@ -207,6 +226,13 @@ int main(int argc, char** argv) {
             cout<<"It is a draw."<<endl;
         }
     }
+    if(win==true){
+        Plr$+=PlrBet;
+    }
+    if(win==false){
+        Plr$-=PlrBet;
+    }
+    }while(Plr$>0);
     
     //Exit Stage right!
     return 0;
