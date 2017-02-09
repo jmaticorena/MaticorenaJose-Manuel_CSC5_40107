@@ -4,7 +4,7 @@
   Created on January 23, 2017, 7:15 PM
   Purpose: Black Jack Project
  * 
- * All rules and regulation on the card game of blackjack
+ * All rules and regulations on the card game of blackjack
  * were taken from the official Bicycle Cards website
  * http://www.bicyclecards.com/how-to-play/blackjack/
  */
@@ -13,7 +13,6 @@
 #include <iostream> //Input and Output
 #include <cstdlib>  //Random Number Generator
 #include <ctime>    //Random Number Seed
-#include <string>   //String Library
 #include <fstream>  //File Library
 #include <iomanip>  //Format Library
 using namespace std;
@@ -24,6 +23,7 @@ using namespace std;
 //Such as Pi, speed of light -> Math/science values
 //as well as conversions from system of units to another
 const int COLS=7;
+
 //Function Prototypes
 int Deck();//Deck of Cards Function
 char fceCrd(int);//Configure Face Cards Function
@@ -67,6 +67,7 @@ int main(int argc, char** argv) {
      
     const int BlckJck=21;
     const int size=10;
+    const int rows=3;
     int Data[size]={};
     string Label[size]{"Total Games Played","Total Games Won","Total Games Lost",
     "Total Games Drawn","Total Money Avaliable","Total Money Won","Total Money Lost",
@@ -447,7 +448,7 @@ int main(int argc, char** argv) {
    cout<<endl;
    
    //Thanks
-   char Thx[3][COLS]={{'T','h','a','n','k','s',' '},
+   char Thx[rows][COLS]={{'T','h','a','n','k','s',' '},
                       {' ',' ','f','o','r',' ',' '},
                       {'P','l','a','y','i','n','g'}};
    prnt2d(Thx);
