@@ -390,7 +390,7 @@ int main(int argc, char** argv) {
             }
         }
         
-        MaxCrds<TotCard?MaxCrds=TotCard:TotCard=0;
+        MaxCrds<TotCard?MaxCrds=TotCard:TotCard=0;  
      
         gmsPlyd++;
         

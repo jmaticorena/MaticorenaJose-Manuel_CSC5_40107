@@ -1,0 +1,337 @@
+/* 
+  File:   main.cpp
+  Author: Josemanuel Maticorena
+  Created on January 23, 2017, 7:15 PM
+  Purpose: Black Jack Project
+ * 
+ * All rules and regulation on the card game of blackjack
+ * were taken from the official Bicycle Cards website
+ * http://www.bicyclecards.com/how-to-play/blackjack/
+ */
+
+//System Libraries
+//Input and Output
+//Random Number Generator
+//Random Number Seed
+//String Library
+//File Library
+//Format Library
+
+//user Libraries
+
+//Global Constants
+//Such as Pi, speed of light -> Math/science values
+//as well as conversions from system of units to another
+
+//Function Prototypes
+//Deck of Cards Function
+//Configure Face Cards Function
+//Get Data
+//Print Data
+//Print With 2D array
+
+//Executable code begins here!!!
+
+    
+    //Set the random number Generator
+    
+    
+    //Instantiate Files
+    
+    
+    //declare variables
+    	//First Card Delt
+        //Second Card Delt
+        //First Dealer Card
+        //Keeps Track of Player Aces
+        //Keeps Track of Dealer Aces
+        //Player Money Initialized to $0
+        //Player bet
+        //Total Games Played
+        //Total Games won
+        //Total Games Drawn
+        //Total Games Lost
+        //Largest Number of Cards in One Round
+        //Total Number of Cards in Round
+        //Total Money Won
+        //Total Money Lost
+    	//Sum of the value of the player Cards
+        //Sum of the value of the dealer Cards
+    	//Player Choice to Stay
+        //Game Won Variable
+        //Player Choice to continue
+        //PLayer Name String
+        //Player Choice String
+     
+    //Blackjack Constant
+    //Size Array Constant
+    //Declare Array
+    //Declare Array
+  
+    
+    //Begin 
+    
+    
+    //Enter Name
+   
+    //Create File Name
+
+    
+    //Check if player has Played Before
+    //Reading player file 
+    //total games played
+    //Input Player Data
+    //Close File
+
+    
+    //Output Values From Previous Play Sessions
+    
+    
+    //First Time playing
+    
+    //Initialize Player Money Amount
+
+    
+    //GamePlay Begins
+    
+    //Do while loop for Option to Continue Playing cntinue=true
+    
+            
+            //Reinitialize Number of Aces and total cards to 0
+           
+
+            //Validate Bet Amount
+            
+            
+
+           
+            
+        //Beginning Deal
+        //First Player Card 
+        
+
+        //Displaying Cards
+        
+        
+
+        //Second Player Card 
+       
+
+        //Displaying Face Cards
+        
+        
+        //Adding Up Cards
+        //Setting first Face Card Value
+        //Checking for Ace
+           //Incrementing number of Aces player has
+           //Setting first ace card to 11
+        
+        //Checking if second card is Face Card
+            //Setting second Face Card Value
+        //Checking for Ace
+            //Incrementing number of Aces player has
+            //Setting second ace card to 11
+        
+        
+        //Determining Player Card Value
+        
+        
+        //Account for two Aces
+        //One ace set to 11. Other set to 1
+        
+        
+        //Display Total
+        
+        
+        //Increment Number of Cards
+        
+        
+        //First Dealer Card
+       
+
+        //Displaying Face Cards
+        //Call the face card function
+        //Display Dealer Card
+        //Display Dealer Card
+       
+
+        //Value of the Dealer Card
+        //Checking for face card
+        //Setting face card value
+        //Checking for ace
+        //Incrementing dealer ace
+        //Setting Dealer ace value
+        
+        //Setting the sum of dealer
+
+
+        //Check For Natural Blackjack
+        
+        
+       
+        //Continue Play
+        //Loop while stay is not true
+            //Skip a line for format
+            
+            //Get Player Choice to Hit or Stay
+  
+            
+            //Player Chooses Hit
+            
+                
+                //Draw New Card
+                //Call Deck function and pull a card
+                //Increment Total Cards
+                
+                //Output Card
+                //Checking for face card
+                    //Call facecard function
+                   
+                //Display Card
+                
+                //Adding the Card Value to Sum
+                //Checking for face card
+                //Adding face card value to sum
+                
+                //Checking for ace 
+                    //Adding ace value to sum. Adding 11
+                    //Incrementing Player Aces
+                //Adding card value to sum
+                
+                //Accounting for Aces
+                    //Adjust sum
+                    //Decrement Number of Aces
+                
+
+                //Output Card Value Total
+               //Display total
+
+                //If Play Gets Blackjack or busts
+                  
+            
+            
+            //Player Chooses Stay
+           //Choice to stay 
+               
+               
+               //Dealer will begin to Draw
+                //Dealer Play
+                    
+                    
+                    //Get New Card
+                    //Call Deck function and pull a card
+                    
+                    //Output Card
+                    //Checking for face card
+                    //Call facecard function
+                    
+                    
+                    //Adding the Card Value to Sum
+                    //Checking for face card
+                        //Adding face card value to sum
+                    
+                    //Checking for ace 
+                        //Adding ace value to sum. Adding 11
+                        //Increment dealer aces
+                    //Add card value to sum
+                    
+                    //Accounting for Dealer Aces
+                        //Adjust value
+                        //Decrement Dealer Aces
+                    
+
+                    //Output Dealer Card Total
+                  
+                
+               
+               //Both Player and Dealer Stay
+                
+                //Stay set to true
+          
+
+        //Determining wins or losses
+        //Player Bust
+            
+            //win set to false
+
+       //Player has Blackjack
+            //win set to true
+
+        //Player Stays
+            //Player wins 
+               //win set to true
+          //Player loses
+                //win set to false
+            
+
+            //Player wins dealer busts
+               //win set to true
+            
+            //PLayer and dealer have same value
+                //win set to false;
+                //Increment Games Drawn
+         
+        //Update Bet and Statistics
+        
+        //Increment Games Played
+        
+      //Player Chooses to continue
+        
+        
+            //Choice to Continue or not
+            //Get Player Answer
+            
+
+            //Player Chooses No
+            
+              //Choice to Save Progress
+              
+
+              //Get PLayer Answer
+              
+
+              //Player Chooses to Save
+              
+
+                  //Open Outfile
+                  
+
+                  //Output Statistics
+                  
+
+                  //Close Output file
+                 
+              
+
+              //Update Choice to Continue
+              
+            
+        
+    
+    
+   //Outputting Data
+   
+   
+   //Thanks
+   
+
+    
+    //Exit Stage right!
+   
+
+
+//Deck function
+    //initialize
+   //Random Number from 1-13
+    //
+
+
+ //Account for face cards
+  
+    //return 
+
+ //getdata function
+    
+ //Print Array Function
+
+//Print 2d array Function
